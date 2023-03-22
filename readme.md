@@ -75,3 +75,5 @@ EOF
 - https://wikidocs.net/130351
 
 - https://cumulus.tistory.com/42
+
+- https://serverfault.com/questions/1074397/how-to-set-a-task-to-run-for-a-specific-inventory-group
