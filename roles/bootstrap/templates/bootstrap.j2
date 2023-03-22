@@ -10,9 +10,9 @@ echo "[TASK 1] Enable ssh password authentication"
 echo "[TASK 2] Update /etc/hosts file"
 cat <<EOF >>/etc/hosts
 
-# Control Node.
+# master Node.
 192.168.219.100  k8s-master  k8s-master.test.com
-# Ansible Managed Nodes.
+# Worker Nodes.
 192.168.219.101  k8s-node01  k8s-node01.test.com
 192.168.219.102  k8s-node02  k8s-node02.test.com
 EOF
