@@ -1,0 +1,17 @@
+---
+- hosts: k8s
+  become: true
+  roles:
+    - bootstrap
+    - docker
+    - kubeadm_install
+
+- hosts: master
+  become: true
+  roles:
+    - kube-cluster-master
+
+- hosts: k8s
+  become: true
+  roles:
+    - kube-cluster-workers

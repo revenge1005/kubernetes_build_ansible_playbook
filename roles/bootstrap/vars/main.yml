@@ -1,0 +1,3 @@
+bootstrap_source_file: ./templates/bootstrap.j2
+bootstrap_destin_file: ./bootstrap.sh
+bootstrap_execution: ./bootstrap.sh
