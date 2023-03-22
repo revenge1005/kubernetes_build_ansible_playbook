@@ -23,7 +23,7 @@
 
 <br>
 
-## (c) /etc/hosts 업데이트
+## (c) /etc/hosts 업데이트 - Ansible Node
 
 ```bash
 cat <<EOF >>/etc/hosts
@@ -38,7 +38,7 @@ EOF
 
 <br>
 
-## (d) SSH 키 생성
+## (d) SSH 키 생성 - Ansible Node
 
 ```bash
 {
@@ -55,3 +55,23 @@ EOF
 ## Result
 
 ![2](https://user-images.githubusercontent.com/42735894/226969760-a82a72aa-b016-4a55-b932-e32237a43328.PNG)
+
+## 참고
+
+- https://github.com/revenge1005/Ansible_study/tree/master/02.%20Ansible%20Tutorial%20-%202/Ansible%20Tutorial%202%20-%2009.%20Roles
+
+- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html#modules
+
+- https://github.com/ansible/ansible/issues/39137
+
+- https://techexpert.tips/ko/%EC%96%B4%EC%8A%AC%EC%97%90-%EC%9D%B4%EC%8A%AC%EC%9D%B4-%EC%9E%88%EB%8A%94/ansible-%EC%9A%B0%EB%B6%84%ED%88%AC-%EB%A6%AC%EB%88%85%EC%8A%A4%EC%97%90-%EB%8C%80%ED%95%9C-%ED%94%8C%EB%A0%88%EC%9D%B4-%EB%B6%81-%EC%98%88%EC%A0%9C/
+
+- https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-docker-on-ubuntu-20-04
+
+- https://www.arubacloud.com/tutorial/how-to-create-kubernetes-cluster-with-kubeadm-and-ansible-ubuntu-20-04.aspx
+
+- https://stackoverflow.com/questions/41567196/ansible-how-to-add-variables-to-command-or-shell
+
+- https://wikidocs.net/130351
+
+- https://cumulus.tistory.com/42
