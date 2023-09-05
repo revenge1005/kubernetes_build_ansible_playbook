@@ -14,8 +14,10 @@
   - name: Setting up kubectl command autocomplete
     shell:
       cmd: |
+        apt-get install bash-completion -y 
         source <(kubectl completion bash)
         echo "source <(kubectl completion bash)" >> ~/.bashrc
+      executable: /bin/bash 
 
   - name: Installing etcd - Installing etcd on the control-plane (master)
     shell:
