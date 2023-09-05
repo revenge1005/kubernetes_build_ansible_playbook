@@ -8,7 +8,8 @@
     set_fact:
       join_command: "{{ join_command_raw.stdout_lines[0] }}"
 
-  when: ansible_nodename == "k8s-master"
+#  when: ansible_nodename == "k8s-master"
+  when: inventory_hostname in groups["master"]
 
 - block: # Joining nodes
 

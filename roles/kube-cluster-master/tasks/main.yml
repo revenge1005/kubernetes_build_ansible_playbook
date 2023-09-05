@@ -10,3 +10,10 @@
 
   - name: install Pod network
     shell: kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
+  - name: install Pod network
+    shell:
+      cmd: |
+        apt-get install bash-completion -y
+        source <(kubectl completion bash)
+        echo "source <(kubectl completion bash)" >> ~/.bashrc
