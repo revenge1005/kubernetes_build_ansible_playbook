@@ -11,9 +11,18 @@
   - name: install Pod network
     shell: kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
 
-  - name: install Pod network
+  - name: Setting up kubectl command autocomplete
     shell:
       cmd: |
         apt-get install bash-completion -y
         source <(kubectl completion bash)
         echo "source <(kubectl completion bash)" >> ~/.bashrc
+
+  - name: Installing etcd - Installing etcd on the control-plane (master)
+    shell:
+      cmd: |
+        export RELEASE=$(curl -s https://api.github.com/repos/etcd-io/etcd/releases/latest|grep tag_name | cut -d '"' -f 4)
+        wget https://github.com/etcd-io/etcd/releases/download/${RELEASE}/etcd-${RELEASE}-linux-amd64.tar.gz
+        tar xf etcd-${RELEASE}-linux-amd64.tar.gz
+        cd etcd-${RELEASE}-linux-amd64
+        mv etcd etcdctl etcdutl /usr/local/bin
